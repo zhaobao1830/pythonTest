@@ -202,7 +202,18 @@ date : 2017-7-19
 
 
 #python写代码简单
-x,y = 1,2
-x,y = y,x   # a = temp  temp= b  b = a  java,安卓
-print(x,y)
+# x,y = 1,2
+# x,y = y,x   # a = temp  temp= b  b = a  java,安卓
+# print(x,y)
 
+def func(a, b, c, *args, **kw):
+    print('a =', a, 'b =', b, 'c =', c, 'args =', args, 'kw =', kw)
+
+
+# func(1, 2)
+# func(1, 2, 3)
+# func(1, 2, 3, 4)
+# func(1, 2, 3, 4, 5)
+# func(1, 2, 3, 4, 5, 6, name='jim')
+a_tuple = (1,2)
+func(*a_tuple, name='tom', age=22)
